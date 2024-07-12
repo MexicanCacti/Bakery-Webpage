@@ -2,36 +2,45 @@
 
 <html lang="en">
     <head>
+        <script src="../scripts/main.js" defer></script>
         <link rel="stylesheet" href="../styles/styles.css">
         <meta charset="UTF-8">
-        <title> Restaurant Home Page</title>
+        <title> Cafe Job Page</title>
     </head>
 
     <body>
         <div class="container">
-            <div class="header">
-                <img id ="logo" src="../img/WakenBakeLogo.png" alt="WakenBakeLogo">
-                <div class="subbox">
-                    <button type="button", id="home" onClick="window.location.href='../pages/home.html'"><span>Home</button>
-                    <button type="button", id="cater" onClick="window.location.href='../pages/cater.html'"><span>Cater</span></button>
-                    <button type="button", id="menu" onClick="window.location.href='../pages/menu.html'"><span>Menu</span></button>
-                    <button type="button", id="contact" onClick="window.location.href='../pages/contact.html'"><span>Contact</span></button>
-                    <button type="button", id="jobs" onClick="window.location.href='../pages/jobs.html'"><span>Jobs</span></button>
-                </div>
-            </div>
+            <div id="header-container"></div>
 
 
             <div class="content">
-            </div>
-
-
-            <div class="footer">
-
+                <div class="application">
+                    <form action="../pages/confirm.html" method="" enctype="multipart/form-data">
+                        <label for="name">Name:</label><br>
+                        <input type="text" placeholder="Name" required><br><br>
+                
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="text" placeholder="Phone Number" required><br><br>
+                
+                        <label for="email">Email:</label><br>
+                        <input type="email" placeholder="Email" required><br><br>
+                        
+                        <label for="Requested Position">Position Applying for:</label><br>
+                        <select>
+                            <option value="Front of House">Front of House</option>
+                            <option value="Back of House">Back of House</option>
+                        </select><br><br>
+    
+                        <label for="introduction">Introduce yourself:</label><br>
+                        <textarea placeholder="Introduce yourself!" rows="10" maxlength="3000" required style="width: 80%"></textarea><br><br>
+                
+                        <label for="resume">Upload your resume:</label><br>
+                        <input type="file" accept=".pdf,.doc,.docx" required><br><br>
+                
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
             </div>
         </div>
     </body>
-
-
-
-
 </html>

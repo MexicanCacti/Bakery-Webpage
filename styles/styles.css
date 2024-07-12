@@ -1,30 +1,56 @@
+html{overflow-y:scroll}
+
 body{
     background-color:black;
     margin: 0;
+    font-family:'Impact', sans-serif;
+    color:rgb(247,247,247);
 }
 
 .container{
-    font-family:'Impact';
-    color:white;
     display:grid;
     width:100vw;
-    height: 100vh;
+    height:100vh;
     margin:auto;
-    grid-template-rows: 15% 75% 10%;
+    grid-template-rows: 15% auto 5%;
     grid-gap:0px;
     grid-template-areas:
-    "mm"
+    "hd"
     "ct"
-    "ft"
+    "ft";
 }
 
 .header{
-    grid-area:mm;
+    grid-area:hd;
     display:grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 20% 80%;
     color:black;
-    background-color:white;
+    background-color:rgb(247,247,247);
 
+}
+
+.application{
+    grid-area:ct;
+    display:flex;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding-left:20%;
+    padding-right:20%;
+    border: 2px solid #F7F7F7;
+    border-color:white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #F7F7F7;
+    animation: flicker 5s infinite alternate;
+}
+
+
+@keyframes flicker{
+    50%{
+        box-shadow: 0 0 20px #F7F7F7;
+    }
+    0%, 100%{
+        box-shadow:none;
+    }
 }
 
 .subbox{
@@ -48,24 +74,61 @@ body{
 
 .subbox > button:hover{
     background-color:black;
-    color:white;
+    color:#F7F7F7;
+    animation: shake 5s infinite;
 }
+
 
 .content{
     grid-area:ct;
     display:flex;
     justify-content: center;
+
 }
 
 .footer{
     grid-area:ft;
+    display:flex;
+    justify-content:space-evenly;
+    color:black;
+    background-color:rgb(247,247,247);
+    font-size:larger;
+    font-family:'Times New Roman', Times, serif;
+    height:auto;
+}
+
+.socials{
+    height:auto;
+    width:5vh;
+    margin-left:5%;
+}
+
+.socials:hover{
+    animation: shake 5s infinite;
+}
+
+@keyframes shake{
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 #logo {
-    height:140px;
-    width:200px;
-    max-height:100%;
+    height:15vh;
     max-width:100%;
+}
+
+#sub-foot{
+    font-size:large;
+    font-weight: normal;
 }
 
 #home{
@@ -73,14 +136,14 @@ body{
 }
 
 #cater{
-    order: 3;
+    order: 3; 
 }
 
 #menu{
     order: 2;
 }
 
-#contact{
+#info{
     order: 4;
 }
 
