@@ -1,4 +1,6 @@
-html{overflow-y:scroll}
+html{
+    overflow-y:scroll
+}
 
 body{
     background-color:black;
@@ -12,7 +14,7 @@ body{
     width:100vw;
     height:100vh;
     margin:auto;
-    grid-template-rows: 15% auto 5%;
+    grid-template-rows: 15% 80% 5%;
     grid-gap:0px;
     grid-template-areas:
     "hd"
@@ -29,24 +31,148 @@ body{
 
 }
 
+.content{
+    grid-area:ct;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer{
+    grid-area:ft;
+    display:flex;
+    justify-content:space-evenly;
+    color:black;
+    background-color:rgb(247,247,247);
+    font-size:larger;
+    font-family:'Times New Roman', Times, serif;
+    height:auto;
+}
+
+.menu{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    display:grid;
+    grid-template-areas:
+    "m m m"
+    "i1 sp i2"
+    "i3 sp i4"
+    "i5 i5 i5";
+    border: solid;
+    border-color:rgb(247,247,247);
+    margin:auto;
+    grid-template-columns: 33vh auto 33vh;
+    grid-template-rows: 10vh 20vh 20vh 20vh;
+    animation: flicker 5s infinite alternate;
+}
+
+/* Eventually, I want to have it so hovering displays an image of the menu item */
+.menu li button{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:50%;
+    margin-bottom: 1vh;
+    pointer-events:none;
+    height:5vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:lighter;
+}
+
+
+.menu li button .price{
+    margin-left:auto;
+    text-align:right;
+}
+
+#menu-header{
+    grid-area:m;
+    color:rgb(247,247,247);;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+}
+
+#item-1{
+    grid-area:i1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#item-2{
+    grid-area:i2;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#item-3{
+    grid-area:i3;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-4{
+    grid-area:i4;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-5{
+    grid-area:i5;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-img1{
+    width:10vh;
+    height:10vh;
+    padding-right:15vh;
+    padding-top:2vh;
+}
+
+#menu-img2{
+    width:10vh;
+    height:10vh;
+    padding-left: 15vh;
+    padding-top:2vh;
+}
+
 .application{
     grid-area:ct;
     display:flex;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    padding-left:20%;
-    padding-right:20%;
-    border: 2px solid #F7F7F7;
-    border-color:white;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    padding-left:20vh;
+    padding-right:20vh;
+    border: 2px solid rgb(247,247,247);
+    border-color:rgb(247,247,247);
     border-radius: 10px;
-    box-shadow: 0 0 20px #F7F7F7;
+    box-shadow: 0 0 20px rgb(247,247,247);
     animation: flicker 5s infinite alternate;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:normal;
 }
 
 
 @keyframes flicker{
     50%{
-        box-shadow: 0 0 20px #F7F7F7;
+        box-shadow: 0 0 20px rgb(247,247,247);
     }
     0%, 100%{
         box-shadow:none;
@@ -76,25 +202,6 @@ body{
     background-color:black;
     color:#F7F7F7;
     animation: shake 5s infinite;
-}
-
-
-.content{
-    grid-area:ct;
-    display:flex;
-    justify-content: center;
-
-}
-
-.footer{
-    grid-area:ft;
-    display:flex;
-    justify-content:space-evenly;
-    color:black;
-    background-color:rgb(247,247,247);
-    font-size:larger;
-    font-family:'Times New Roman', Times, serif;
-    height:auto;
 }
 
 .socials{
