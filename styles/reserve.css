@@ -1,0 +1,18 @@
+#reservePage{
+    grid-area:ct;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    padding-left:20vh;
+    padding-right:20vh;
+    border: 2px solid rgb(247,247,247);
+    border-color:rgb(247,247,247);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(247,247,247);
+    animation: flicker 5s infinite alternate;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:normal;
+    color:rgb(247,247,247);
+}

@@ -3,7 +3,9 @@
 <html lang="en">
     <head>
         <script src="../scripts/main.js" defer></script>
-        <link rel="stylesheet" href="../styles/styles.css">
+        <script src="../scripts/menu.js" defer></script>
+        <link rel="stylesheet" href="../styles/global.css">
+        <link rel="stylesheet" href="../styles/menu.css">
         <meta charset="UTF-8">
         <title> Cafe Menu Page</title>
     </head>
@@ -14,50 +16,109 @@
 
 
             <div class="content">
+                <button class="arrow" id="arrow-left"><--</button>
                 <div class="menu">
-                    <h1 id="menu-header">
-                        <img id=menu-img1 src="../img/coffeeSketch.jpg">
-                        MENU
-                        <img id=menu-img2 src="../img/cakeSketch.png">    
-                    </h1>
-                    <li id="item-1"> 
-                        <p>ESPRESSO</p>
-                        <button type="button"><span>Affogato</span><span class="price">$5.00</span></button>
-                        <button type="button"><span>Cafe Latte</span><span class="price">$4.20</span></button>
-                        <button type="button"><span>Cappucino</span><span class="price">$3.00</span></button>
-                        <button type="button"><span>Macchiato</span><span class="price">$4.50</span></button>
-                        <button type="button"><span>White Mocha</span><span class="price">$5.00</span></button>
+                    <div id="drink">
+                        <h1 id="menu-header">
+                            <img id="menu-img1" src="../img/coffeeSketch.jpg">
+                            <u>Drink Menu</u>
+                            <img id="menu-img2" src="../img/smoothie.png">
+                        </h1>
+                        <li id="item-1"> 
+                            <h4>ESPRESSO</h4>
+                            <button type="button"><span>Affogato</span><span class="price">$5.00</span></button>
+                            <button type="button"><span>Cafe Latte</span><span class="price">$4.20</span></button>
+                            <button type="button"><span>Cappucino</span><span class="price">$3.00</span></button>
+                            <button type="button"><span>Macchiato</span><span class="price">$4.50</span></button>
+                            <button type="button"><span>White Mocha</span><span class="price">$5.00</span></button>
+                        </li>
+                        <li id="item-2"> 
+                            <h4>FRAPPE</h4>
+                            <button type="button"><span>Coffee Frappe</span><span class="price">$5.00</span></button>
+                            <button type="button"><span>Vanilla Frappe</span><span class="price">$4.20</span></button>
+                            <button type="button"><span>Matcha Frappe</span><span class="price">$3.00</span></button>
+                            <button type="button"><span>Mocha Frappe</span><span class="price">$4.50</span></button>
+                            <button type="button"><span>Milk Tea Frappe</span><span class="price">$5.00</span></button>
+                        </li>
+                        <li id="item-3"> 
+                            <h4>TEA</h4>
+                            <button type="button"><span>Black Tea</span><span class="price">$3.75</span></button>
+                            <button type="button"><span>Green Tea</span><span class="price">$4.50</span></button>
+                            <button type="button"><span>Chai Tea</span><span class="price">$4.50</span></button>
+                            <button type="button"><span>Thai Tea</span><span class="price">$4.25</span></button>
+                            <button type="button"><span>Milk Tea</span><span class="price">$5.50</span></button>
+                        </li>
+                        <li id="item-4"> 
+                            <h4>SMOOTHIE</h4>
+                            <button type="button"><span>Blueberry</span><span class="price">$5.00</span></button>
+                            <button type="button"><span>Mango</span><span class="price">$4.20</span></button>
+                            <button type="button"><span>Lemon</span><span class="price">$3.00</span></button>
+                            <button type="button"><span>Chocolate Banana</span><span class="price">$4.50</span></button>
+                        </li>
+                        <li id="item-5"> 
+                            <h4>OTHER</h4>
+                            <button type="button"><span>Water</span><span class="price">Free!</span></button>
+                            <button type="button"><span>Lemonade</span><span class="price">$3.00</span></button>
+                            <button type="button"><span>Orange Juice</span><span class="price">$2.00</span></button>
+                            <button type="button"><span>Whole Milk</span><span class="price">$2.00</button>
+                            <button type="button"><span>Chocolate Milk</span><span class="price">$3.00</span></button>
+                            <button type="button"><span>Almond Milk</span><span class="price">$3.50</span></button>     
+                        </li>
+                    </div>
 
-                    </li>
-                    <li id="item-2"> 
-                        <h4>FRAPPE</h4>
-                        <button type="button"><span>Coffee Frappe</span><span class="price">$5.00</span></button>
-                        <button type="button"><span>Vanilla Frappe</span><span class="price">$4.20</span></button>
-                        <button type="button"><span>Matcha Frappe</span><span class="price">$3.00</span></button>
-                        <button type="button"><span>Mocha Frappe</span><span class="price">$4.50</span></button>
-                        <button type="button"><span>Milk Tea Frappe</span><span class="price">$5.00</span></button>
-                    </li>
-                    <li id="item-3"> 
-                        <h4>TEA</h4>
-                        <button type="button"><span>Fruit Tea</span><span class="price">$3.75</span></button>
-                        <button type="button"><span>Green Tea</span><span class="price">$4.50</span></button>
-                        <button type="button"><span>Herbal Tea</span><span class="price">$4.50</span></button>
-                        <button type="button"><span>Raspberry Tea</span><span class="price">$4.25</span></button>
-                    </li>
-                    <li id="item-4"> 
-                        <h4>SMOOTHIE</h4>
-                        <button type="button"><span>Blueberry</span><span class="price">$5.00</span></button>
-                        <button type="button"><span>Mango</span><span class="price">$4.20</span></button>
-                        <button type="button"><span>Lemon</span><span class="price">$3.00</span></button>
-                        <button type="button"><span>Chocolate</span><span class="price">$4.50</span></button>
-                    </li>
-                    <li id="item-5"> 
-                        <h4>DESSERTS</h4>
-                        <button type="button"><span>Pasty-Spread</span><span class="price">$24.00</span></button>
-                        <button type="button"><span>Cake-Spread</span><span class="price">$35.00</span></button>
-                        <button type="button"><span>Cookie-Spread</span><span class="price">$20.00</span></button>
-                    </li>
+                    <div id="dessert">
+                        <h1 id="menu-header">
+                            <img id="menu-img1" src="../img/pancakeSketch.png">   
+                            <u>Dessert Menu</u>                       
+                            <img id="menu-img2" src="../img/cakeSketch.png">
+                        </h1>
+                        <li id="item-1"> 
+                            <h4>CAKES</h4>
+                            <button type="button"><span>Strawberry Short</span><span class="price">$43.00</span></button>
+                            <button type="button"><span>Black Forest</span><span class="price">$44.00</span></button>
+                            <button type="button"><span>German Chocolate</span><span class="price">$43.00</span></button>
+                            <button type="button"><span>Swiss Mocha</span><span class="price">$43.00</span></button>
+                            <button type="button"><span>Red Velvet</span><span class="price">$40.00</span></button>
+                            <button type="button"><span>Chocolate Raspberry</span><span class="price">$45.00</span></button>
+                            <button type="button"><span>White Cloud</span><span class="price">$42.00</span></button>
+                            <button type="button"><span>Carrot Chiffon</span><span class="price">$43.00</span></button>
+                            <button type="button"><span>Mocha Mania</span><span class="price">$43.00</span></button>
+                            <button type="button"><span>Baker's Variety</span><span class="price">$55.00</span></button>
+                        </li>
+                        <li id="item-2"> 
+                            <h4>PANCAKES</h4>
+                            <button type="button"><span>Buttermilk</span><span class="price">$13.00</span></button>
+                            <button type="button"><span>Chocolate Chip</span><span class="price">$13.50</span></button>
+                            <button type="button"><span>Tres Leches</span><span class="price">$15.00</span></button>
+                            <button type="button"><span>Cinn-A-Stack</span><span class="price">$14.00</span></button>
+                            <button type="button"><span>Blueberry</span><span class="price">$15.50</span></button>
+                            <button type="button"><span>Strawberry Banana</span><span class="price">$15.00</span></button>
+                            <button type="button"><span>Protein</span><span class="price">$15.00</span></button>
+                            <button type="button"><span>House Special</span><span class="price">$15.50</span></button>
+                        </li>
+                        <li id="item-3"> 
+                            <h4>PASTRIES</h4>
+                            <button type="button"><span>Macaroons</span><span class="price">$18.00</span></button>
+                            <button type="button"><span>Cream Puffs</span><span class="price">$7.00</span></button>
+                            <button type="button"><span>Lemon Bar</span><span class="price">$5.00</span></button>
+                            <button type="button"><span>Salted Caramel Cupcake</span><span class="price">$7.50</span></button>
+                            <button type="button"><span>Eclair</span><span class="price">$7.00</span></button>
+                        </li>
+                        <li id="item-4"> 
+                            <h4>COOKIES</h4>
+                            <button type="button"><span>Assorted Biscotti</span><span class="price">$12.00</span></button>
+                            <button type="button"><span>Chocolate Chip Cookies</span><span class="price">$5.00</span></button>
+                            <button type="button"><span>Ginger Snaps</span><span class="price">$6.50</span></button>
+                            <button type="button"><span>Ube Cookie</span><span class="price">$4.00</span></button>
+                            <button type="button"><span>Peanut Butter Cookie</span><span class="price">$4.00</span></button>
+                        </li>
+                        <li id="item-5"> 
+                            <h4>PIES</h4>
+                            <p>Our pies are baked daily with a different assortment of pies each week!</p>
+                        </li>
+                    </div>
                 </div>
+                <button class="arrow" id="arrow-right">--></button>
             </div>
 
 

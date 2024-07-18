@@ -1,0 +1,172 @@
+.menu{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    background:none;
+}
+
+/* Eventually, I want to have it so hovering displays an image of the menu item */
+.menu li button{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:50%;
+    pointer-events:none;
+    margin-top:auto;
+    margin-bottom:auto;
+    height: 4vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:lighter;
+}
+
+
+.menu li button .price{
+    margin-left:auto;
+    text-align:right;
+}
+
+.arrow {
+    padding:5px;
+    border: solid;
+    border-radius:5px;
+    position:absolute;
+    pointer-events: auto;
+    top:50%;
+    z-index:2;
+}
+
+#arrow-left{
+    left: 5vw;
+}
+
+#arrow-right{
+    right: 5vw;
+}
+
+#drink, #dessert {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:90vw;
+    margin:auto;
+    transition-property: opacity;
+    transition-duration: 1s;
+    pointer-events:auto;
+    animation: flicker 5s infinite alternate;
+}
+
+#drink{
+    display:grid;
+    grid-template-areas:
+    "m m m"
+    "i1 sp i2"
+    "i3 sp i4"
+    "i5 i5 i5";
+    grid-template-columns: 33vh auto 33vh;
+    grid-template-rows: 15vh 20vh 20vh 20vh;
+    margin:auto;
+    opacity:1;
+    z-index:1;
+    border: solid;
+    border-radius:2px;
+    border-color:rgb(4, 184, 255);
+}
+
+#dessert {
+    display:grid;
+    grid-template-areas:
+    "m m m"
+    "i1 i3 i2"
+    "i1 i4 i2"
+    "i1 i5 i2";
+    grid-template-columns: 33vh auto 33vh;
+    grid-template-rows: 15vh 20vh 20vh 20vh;
+    opacity:0;
+    z-index:0;
+    border:solid;
+    border-radius:2px;
+    border-color:rgb(255, 0, 0);
+}
+
+#menu-header{
+    grid-area:m;
+    color:rgb(247,247,247);
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#item-1, #item-2, #item-3, #item-4, #item-5{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Drink Items */
+#drink #item-1{
+    grid-area:i1;
+}
+
+#drink #item-2{
+    grid-area:i2;
+}
+
+#drink #item-3{
+    grid-area:i3;
+}
+
+#drink #item-4{
+    grid-area:i4;
+}
+
+#drink #item-5{
+    grid-area:i5;
+}
+
+/* Cake Items */
+#dessert #item-1{
+    grid-area:i1;
+}
+
+#dessert #item-2{
+    grid-area:i2;
+}
+
+#dessert #item-3{
+    grid-area:i3;
+}
+
+#dessert #item-4{
+    grid-area:i4;
+}
+
+#dessert #item-5{
+    grid-area:i5;
+}
+
+#menu-img1, #menu-img2{
+    width:10vh;
+    height:10vh;
+}
+
+#menu-img1{
+    padding-right:15vh;
+    padding-top:2vh;
+}
+
+#menu-img2{
+    padding-left: 15vh;
+    padding-top:2vh;
+}
+
+@keyframes flicker{
+    50%{
+        box-shadow: 0 0 20px rgb(247,247,247);
+    }
+    0%, 100%{
+        box-shadow:none;
+    }
+}
