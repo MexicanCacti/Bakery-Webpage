@@ -1,19 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const showFormBtn = document.getElementById("showFormBtn");
-    const popupForm = document.getElementById("popupForm");
-    const closeBtn = document.querySelector(".close-btn");
-
-    showFormBtn.addEventListener("click", function() {
-        popupForm.style.display = "flex";
+    const reservePage = document.getElementById("reservePage");
+    const reserveForm = document.getElementById("reserveForm");
+    const showForm = document.getElementById("showForm");
+    const closeForm = document.getElementById("close");
+    closeForm.addEventListener("click", function() {
+        reserveForm.style.zIndex = 0;
+        reserveForm.style.opacity = 0;
+        reservePage.style.opacity = 1;
     });
 
-    closeBtn.addEventListener("click", function() {
-        popupForm.style.display = "none";
-    });
-
-    window.addEventListener("click", function(event) {
-        if (event.target === popupForm) {
-            popupForm.style.display = "none";
-        }
+    showForm.addEventListener("click", function() {
+        reserveForm.style.zIndex = 2;
+        reserveForm.style.opacity = 1;
+        reservePage.style.opacity = 0.3;
     });
 });

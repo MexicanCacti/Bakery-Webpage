@@ -15,4 +15,28 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight:normal;
     color:rgb(247,247,247);
+    z-index:1;
+}
+
+#reserveForm{
+    grid-area:ct;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    padding-left:20vh;
+    padding-right:20vh;
+    border: 2px solid rgb(247,247,247);
+    border-color:rgb(247,247,247);
+    border-radius: 10px;
+    width:80%;
+    opacity:0;
+    z-index:0;
+    background-color:transparent;
+}
+
+#close{
+    text-align:right;
+    margin-left:auto;
 }
