@@ -18,7 +18,7 @@
             <div class="content">
                 <div id="reservePage">
                     Online reservations may be booked one month to the calendar date in advance.<br>
-                    All reservations require 48 hours’ notice for cancellations.<br><br>
+                    All reservations require 48 hour notice for cancellations.<br><br>
                     <button type="button" id="showForm">Make Reservation</button>
                 </div>
 
@@ -26,15 +26,19 @@
 
             <div id="reserveForm">
                 <button type="button" id="close">X</button>
-                <form action="../pages/confirm.html" method="" enctype="multipart/form-data">
-                    <label for="date">Date:</label><br>
-                    <input type="date" required><br><br>
+                <form id="reservation" enctype="multipart/form-data">
+                    <label>Date:</label><br>
+                    <input type="date" id="calendar" required><br><br>
+
+                    <label>Time:</label><br>
+                    <input type="time" id="clock" min="10:00" max="16:00" required><br><br>
+
+                    <!--TODO: ADD PHONENUMBER & EMAIL CUSTOM CHECKS-->
+                    <label>Phone Number:</label><br>
+                    <input type="text" placeholder="Phone Number" ><br><br>
             
-                    <label for="phone">Phone Number:</label><br>
-                    <input type="text" placeholder="Phone Number" required><br><br>
-            
-                    <label for="email">Email:</label><br>
-                    <input type="email" placeholder="Email" required><br><br>
+                    <label>Email:</label><br>
+                    <input type="email" placeholder="Email" ><br><br>
             
                     <input type="submit" value="Submit">
                 </form>
@@ -43,5 +47,82 @@
 
             <div id="footer-container"></div>
         </div>
+
+        <!--For some reason this wouldn't load in reserve.js-->
+        <script>
+            console.log("Script Loaded")
+            
+            const calendarInput = document.getElementById("calendar");
+            const clockInput = document.getElementById("clock");
+
+            calendarInput.addEventListener("change", function(){
+                var userDay = new Date(calendarInput.value);
+                var dayOfWeek = userDay.getDay(); // 0 = monday, 6 = sunday
+                clockInput.value = "";
+                switch(dayOfWeek){
+                    case 0:
+                        alert("Selected date is a Monday. We are closed Monday, Tuesday, and Thursday.");
+                        break;
+                    case 1:
+                        alert("Selected date is a Tuesday. We are closed Monday, Tuesday, and Thursday.");
+                        break;
+                    case 2:
+                        clockInput.min = "10:00";
+                        clockInput.max = "16:00";
+                        break;
+                    case 3:
+                        alert("Selected date is a Thursday. We are closed Monday, Tuesday, and Thursday.");
+                        break;                        
+                    case 4:
+                        clockInput.min = "9:00";
+                        clockInput.max = "16:00";
+                        break;
+                    case 5:
+                        clockInput.min = "7:00";
+                        clockInput.max = "16:00";
+                        break;
+                    case 6:
+                        clockInput.min = "9:00";
+                        clockInput.max = "16:00";
+                        break;
+                    default:
+                        alert("Error getting day of week");
+                };
+
+                console.log("MIN: " + clockInput.min + "MAX: " + clockInput.max );
+            });
+
+            clockInput.addEventListener("change", function(){
+                var userTime = clockInput.value;
+                var minTime = clockInput.min;
+                var maxTime = clockInput.max;
+                if(userTime < minTime) {
+                    alert("Choose a time after " + minTime);
+                }
+                else if(userTime > maxTime){
+                    alert("Choose a time before " + maxTime)
+                }
+                clockInput.value = "";
+            });
+
+            reserveForm.addEventListener("submit", function(event){
+                var currentDate = new Date();
+                var currentDatePlusOne = new Date();
+                currentDatePlusOne.setMonth(currentDate.getMonth() + 1);
+                var userDate = new Date(calendarInput.value);
+                console.log("Day of Week: " + userDate.getDay());
+                if(userDate.getDay() == 0 || userDate.getDay() == 1 || userDate.getDay() == 3){
+                    event.preventDefault();
+                    alert("Calendar date is invalid. We are closed Monday, Tuesday, and Thursday.");
+                }
+                else if (userDate < currentDatePlusOne){
+                    event.preventDefault();
+                    alert("Please select a date at least one month in advance of: " + currentDate.toDateString());
+                }
+                else{
+                    event.preventDefault();
+                }       
+            });
+        </script>
     </body>
 </html>

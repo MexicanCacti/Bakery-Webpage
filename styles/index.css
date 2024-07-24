@@ -1,0 +1,61 @@
+.content{
+    display:grid;
+    grid-template-areas:
+    "hl hl hl"
+    "img1 txt1 img2"
+    "txt2 img3 txt3";
+    grid-template-rows: 10% 45% 45%;
+    grid-template-columns: 30% 40% 30%;
+    margin-top: 10px;
+    color:rgb(247,247,247); 
+}
+
+
+#ct-h1{
+    grid-area:h1;
+}
+
+#img1, #img2, #img3{
+    width: 90%;
+    height: 90%;
+    border:solid;
+    border-radius:2px;
+    border-color:rgb(247,247,247);
+    transition-property: opacity;
+    transition-duration: 1s;
+    pointer-events:auto;
+    animation: flicker 5s infinite alternate;
+}
+
+@keyframes flicker{
+    50%{
+        box-shadow: 0 0 20px rgb(247,247,247);
+    }
+    0%, 100%{
+        box-shadow:none;
+    }
+}
+
+#img1{
+    grid-area:img1;
+}
+
+#img2{
+    grid-area:img2;
+}
+
+#img3{
+    grid-area:img3;
+}
+
+#txt1{
+    grid-area:txt1;
+}
+
+#txt2{
+    grid-area:txt2;
+}
+
+#txt3{
+    grid-area:txt3;
+}
