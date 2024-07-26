@@ -12,7 +12,15 @@
 
     <body>
         <div class="container">
-            <div id="header-container"></div>
+            <div class="header">
+                <img id ="logo" src="../img/WakenBakeLogo.png" alt="WakenBakeLogo">
+                <div class="subbox">
+                    <button type="button" id="home" onClick="window.location.href='../pages/index.html'"><span>Home</button>
+                    <button type="button" id="reserve" onClick="window.location.href='../pages/reserve.html'"><span>Reserve</span></button>
+                    <button type="button" id="menu" onClick="window.location.href='../pages/menu.html'"><span>Menu</span></button>
+                    <button type="button" id="jobs" onClick="window.location.href='../pages/jobs.html'"><span>Jobs</span></button>
+                </div>
+            </div>
 
 
             <div class="content">
@@ -37,7 +45,7 @@
                         </div>
                         
                         <li id="item-1"> 
-                            <h4>ESPRESSO</h4>
+                            <h4 class="menuLabel">ESPRESSO</h4>
                             <button type="button"><span>Affogato</span><span class="price">$5.00</span></button>
                             <button type="button"><span>Cafe Latte</span><span class="price">$4.20</span></button>
                             <button type="button"><span>Cappucino</span><span class="price">$3.00</span></button>
@@ -45,7 +53,7 @@
                             <button type="button"><span>White Mocha</span><span class="price">$5.00</span></button>
                         </li>
                         <li id="item-2"> 
-                            <h4>FRAPPE</h4>
+                            <h4 class="menuLabel">FRAPPE</h4>
                             <button type="button"><span>Coffee Frappe</span><span class="price">$5.00</span></button>
                             <button type="button"><span>Vanilla Frappe</span><span class="price">$4.20</span></button>
                             <button type="button"><span>Matcha Frappe</span><span class="price">$3.00</span></button>
@@ -53,7 +61,7 @@
                             <button type="button"><span>Milk Tea Frappe</span><span class="price">$5.00</span></button>
                         </li>
                         <li id="item-3"> 
-                            <h4>TEA</h4>
+                            <h4 class="menuLabel">TEA</h4>
                             <button type="button"><span>Black Tea</span><span class="price">$3.75</span></button>
                             <button type="button"><span>Green Tea</span><span class="price">$4.50</span></button>
                             <button type="button"><span>Chai Tea</span><span class="price">$4.50</span></button>
@@ -61,14 +69,14 @@
                             <button type="button"><span>Milk Tea</span><span class="price">$5.50</span></button>
                         </li>
                         <li id="item-4"> 
-                            <h4>SMOOTHIE</h4>
+                            <h4 class="menuLabel">SMOOTHIE</h4>
                             <button type="button"><span>Blueberry</span><span class="price">$5.00</span></button>
                             <button type="button"><span>Mango</span><span class="price">$4.20</span></button>
                             <button type="button"><span>Lemon</span><span class="price">$3.00</span></button>
                             <button type="button"><span>Chocolate Banana</span><span class="price">$4.50</span></button>
                         </li>
                         <li id="item-5"> 
-                            <h4>OTHER</h4>
+                            <h4 class="menuLabel">OTHER</h4>
                             <button type="button"><span>Water</span><span class="price">Free!</span></button>
                             <button type="button"><span>Lemonade</span><span class="price">$3.00</span></button>
                             <button type="button"><span>Orange Juice</span><span class="price">$2.00</span></button>
@@ -85,7 +93,7 @@
                             <img id="menu-img2" src="../img/cakeSketch.png" alt="cake">
                         </h1>
                         <li id="item-1"> 
-                            <h4>CAKES</h4>
+                            <h4 class="menuLabel">CAKES</h4>
                             <button type="button"><span>Strawberry Short</span><span class="price">$43.00</span></button>
                             <button type="button"><span>Black Forest</span><span class="price">$44.00</span></button>
                             <button type="button"><span>German Chocolate</span><span class="price">$43.00</span></button>
@@ -98,7 +106,7 @@
                             <button type="button"><span>Baker's Variety</span><span class="price">$55.00</span></button>
                         </li>
                         <li id="item-2"> 
-                            <h4>PANCAKES</h4>
+                            <h4 class="menuLabel">PANCAKES</h4>
                             <button type="button"><span>Buttermilk</span><span class="price">$13.00</span></button>
                             <button type="button"><span>Chocolate Chip</span><span class="price">$13.50</span></button>
                             <button type="button"><span>Tres Leches</span><span class="price">$15.00</span></button>
@@ -109,7 +117,7 @@
                             <button type="button"><span>House Special</span><span class="price">$15.50</span></button>
                         </li>
                         <li id="item-3"> 
-                            <h4>PASTRIES</h4>
+                            <h4 class="menuLabel">PASTRIES</h4>
                             <button type="button"><span>Macaroons</span><span class="price">$18.00</span></button>
                             <button type="button"><span>Cream Puffs</span><span class="price">$7.00</span></button>
                             <button type="button"><span>Lemon Bar</span><span class="price">$5.00</span></button>
@@ -117,7 +125,7 @@
                             <button type="button"><span>Eclair</span><span class="price">$7.00</span></button>
                         </li>
                         <li id="item-4"> 
-                            <h4>COOKIES</h4>
+                            <h4 class="menuLabel">COOKIES</h4>
                             <button type="button"><span>Assorted Biscotti</span><span class="price">$12.00</span></button>
                             <button type="button"><span>Chocolate Chip Cookies</span><span class="price">$5.00</span></button>
                             <button type="button"><span>Ginger Snaps</span><span class="price">$6.50</span></button>
@@ -125,7 +133,7 @@
                             <button type="button"><span>Peanut Butter Cookie</span><span class="price">$4.00</span></button>
                         </li>
                         <li id="item-5"> 
-                            <h4>PIES</h4>
+                            <h4 class="menuLabel">PIES</h4>
                             <p>Our pies are baked daily with a different assortment of pies each week!</p>
                         </li>
                     </div>
@@ -134,7 +142,29 @@
             </div>
 
 
-            <div id="footer-container"></div>
+            <div class="footer">
+                <h2><u>Contact Us</u><br>
+                    <p id="sub-foot">
+                        1234 Fake St<br>
+                        (123) 456 7890<br>
+                        fakeEmail@fake.com
+                    </p>
+                </h2>
+                <h2><u>Cafe Hours</u><br>
+                    <p id="sub-foot">
+                        Monday & Tuesday: Closed<br>
+                        Wednesday: 10AM - 4PM<br>
+                        Thursday : Closed <br>
+                        Friday: 9AM - 4PM <br>
+                        Saturday: 7AM - 4PM<br>
+                        Sunday: 9AM - 4PM
+                    </p>
+                </h2>
+                <h2><u>Follow Us<br></u>
+                <input type="image" src="../img/drawnInst.png" class="socials" alt="Instagram" name="Instagram">
+                <input type="image" src="../img/drawnFace.png" class="socials" alt="Facebook" name="Facebook" >                 
+                </h2>
+            </div>
         </div>
     </body>
 </html>

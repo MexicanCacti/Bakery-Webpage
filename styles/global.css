@@ -68,6 +68,7 @@ body{
     width: 10%;
     height:20%;
     background-color: transparent;
+    font-size:2vh;
 }
 
 .subbox > button:hover{
