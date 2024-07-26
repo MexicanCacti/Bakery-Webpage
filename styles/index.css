@@ -38,14 +38,17 @@
 
 #img1{
     grid-area:img1;
+    margin-right: auto;
 }
 
 #img2{
     grid-area:img2;
+    margin-left: auto;
 }
 
 #img3{
     grid-area:img3;
+    margin: auto;
 }
 
 #txt1{
@@ -58,4 +61,15 @@
 
 #txt3{
     grid-area:txt3;
+}
+
+#txt1, #txt2, #txt3{
+    text-align:center;
+    font-family:'Times New Roman', Times, serif;
+    font-size:large;
+    color:white;
+    border-top:solid;
+    border-bottom:solid;
+    border-color:rgb(247,247,247);
+    text-wrap:balance;
 }

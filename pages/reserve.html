@@ -56,9 +56,8 @@
             const clockInput = document.getElementById("clock");
 
             calendarInput.addEventListener("change", function(){
-                var userDay = new Date(calendarInput.value);
-                var dayOfWeek = userDay.getDay(); // 0 = monday, 6 = sunday
-                clockInput.value = "";
+                var userDate = new Date(calendarInput.value);
+                var dayOfWeek = userDate.getDay(); // 0 = monday, 6 = sunday
                 switch(dayOfWeek){
                     case 0:
                         alert("Selected date is a Monday. We are closed Monday, Tuesday, and Thursday.");
@@ -88,7 +87,7 @@
                     default:
                         alert("Error getting day of week");
                 };
-
+                clockInput.value = "";
                 console.log("MIN: " + clockInput.min + "MAX: " + clockInput.max );
             });
 
@@ -96,13 +95,18 @@
                 var userTime = clockInput.value;
                 var minTime = clockInput.min;
                 var maxTime = clockInput.max;
-                if(userTime < minTime) {
-                    alert("Choose a time after " + minTime);
+    
+                var userTimeCompare = convertSeconds(userTime);
+                var minTimeCompare = convertSeconds(minTime);
+                var maxTimeCompare = convertSeconds(maxTime);
+                if(userTimeCompare < minTimeCompare) {
+                    alert("Choose a time after " + minTime + " AM");
+                    console.log("MIN: " + clockInput.min + "CHOSEN: " + userTime);
                 }
-                else if(userTime > maxTime){
-                    alert("Choose a time before " + maxTime)
+                else if(userTimeCompare > maxTimeCompare){
+                    alert("Choose a time before " + maxTime + " PM");
+                    console.log("MAX: " + clockInput.max + "CHOSEN: " + userTime);
                 }
-                clockInput.value = "";
             });
 
             reserveForm.addEventListener("submit", function(event){
@@ -123,6 +127,12 @@
                     event.preventDefault();
                 }       
             });
+
+            function convertSeconds(timeInput) {
+                var time = timeInput.split(":");
+                time = parseInt(time[0] * 3600 + time[1] * 60);
+                return time;
+            }
         </script>
     </body>
 </html>
