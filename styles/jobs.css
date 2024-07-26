@@ -1,19 +1,62 @@
 .application{
     grid-area:ct;
     display:flex;
-    padding-top: 10vh;
-    padding-bottom: 5vh;
-    padding-left:20vh;
-    padding-right:20vh;
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left:5vh;
+    padding-right:5vh;
     border: 2px solid rgb(247,247,247);
     border-color:rgb(247,247,247);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgb(247,247,247);
+    border-radius: 1vw;
+    box-shadow: 0 0 2vw rgb(247,247,247);
     animation: flicker 5s infinite alternate;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight:normal;
+    width:50vw;
+    height:auto;
+    margin:auto;
 }
 
 .application file {
     cursor: url(../img/oth665.cur), auto;
+}
+
+.application input[type="text"],
+.application input[type="email"],
+.application select,
+.application textarea {
+    width: 50vw;
+    margin-bottom: 2vh;
+    font-size:1.5vh;
+    max-width:50vw;
+    max-height:50vh;
+}
+
+.application input[type="file"] {
+    margin-bottom: 2vh;
+    font-size: 1.5vh;
+}
+
+.application input[type="submit"] {
+    width: 100%;
+    padding: 2vh 0;
+    background-color: rgb(247, 247, 247);
+    color: black;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 2vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.application input[type="submit"]:hover {
+    background-color: black;
+    color: rgb(247, 247, 247);
+}
+
+.application label {
+    font-size: 2vh;
 }

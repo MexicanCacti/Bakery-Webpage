@@ -25,6 +25,9 @@
     text-align:right;
 }
 
+.menu h4{
+    font-size:2.5vh;
+}
 
 .arrow {
     padding:5px;
@@ -38,6 +41,12 @@
 
 .menuLabel{
     margin-top:15vh;
+}
+
+#arrow-left, #arrow-right{
+    width:fit-content;
+    height:fit-content;
+    font-size:1.5vh;
 }
 
 #arrow-left{
@@ -101,6 +110,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    font-size:6vh;
 }
 
 #item-1, #item-2, #item-3, #item-4, #item-5{

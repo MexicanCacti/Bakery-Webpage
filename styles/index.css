@@ -72,4 +72,16 @@
     border-bottom:solid;
     border-color:rgb(247,247,247);
     text-wrap:balance;
+    height:fit-content;
+    width:fit-content;
+}
+
+@media (max-width: 1007px){
+    .container{
+        height:200vh;
+    }
+    #img1, #img2, #img3{
+        width:50%;
+        height:50%;
+    }
 }
