@@ -12,7 +12,7 @@
     width:50%;
     pointer-events:none;
     margin-top:auto;
-    margin-bottom:auto;
+    margin-bottom: 1vh;
     height: 4vh;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight:lighter;
@@ -37,7 +37,7 @@
 }
 
 .menuLabel{
-    margin: auto;
+    margin-top:15vh;
 }
 
 #arrow-left{
@@ -49,27 +49,29 @@
 }
 
 #drink, #dessert {
+    display:grid;
+    grid-template-columns: 33vh auto 33vh;
     position: absolute;
     top:0;
     left:0;
     right:0;
     bottom:0;
     width:90vw;
+    height:auto;
     margin:auto;
     transition-property: opacity;
     transition-duration: 1s;
     pointer-events:auto;
     animation: flicker 5s infinite alternate;
+    grid-gap:1vh;
 }
 
 #drink{
-    display:grid;
     grid-template-areas:
     "m m m"
     "i1 sp1 i2"
     "i3 sp2 i4"
     "i5 i5 i5";
-    grid-template-columns: 33vh auto 33vh;
     grid-template-rows: 15vh 20vh 20vh 20vh;
     opacity:1;
     z-index:1;
@@ -79,13 +81,11 @@
 }
 
 #dessert {
-    display:grid;
     grid-template-areas:
     "m m m"
     "i1 i3 i2"
     "i1 i4 i2"
     "i1 i5 i2";
-    grid-template-columns: 33vh auto 33vh;
     grid-template-rows: 15vh 20vh 20vh 20vh;
     opacity:0;
     z-index:0;

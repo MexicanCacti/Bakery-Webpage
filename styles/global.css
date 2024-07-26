@@ -15,7 +15,7 @@ body{
     width:100vw;
     height:100vh;
     margin:auto;
-    grid-template-rows: 15% 80% 5%;
+    grid-template-rows: 15% 90% 10%;
     grid-gap:0px;
     grid-template-areas:
     "hd"
@@ -46,9 +46,9 @@ body{
     justify-content:space-evenly;
     color:black;
     background-color:rgb(247,247,247);
-    font-size:larger;
+    font-size:2vh;
     font-family:'Times New Roman', Times, serif;
-    height:auto;
+    height:fit-content;
 }
 
 .subbox{
